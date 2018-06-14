@@ -1012,11 +1012,10 @@ only screen and (min-device-pixel-ratio : 1.5) {
     display: inline-block;
     margin-bottom: 10px;
     transition: 0.5s;
-    color: #fff;
 }
 
 .banner-icon:hover  {
-    color: #666;
+    color: #fff;
 }
 
 .banner {
@@ -1048,8 +1047,10 @@ only screen and (min-device-pixel-ratio : 1.5) {
 }
 
 .banner span{
-    color: white;
     font-weight: 600;
+}
+.banner span:hover{
+    color: #fff;
 }
 
 
@@ -1074,14 +1075,23 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 .scrollup{
     position:fixed;
-    width:32px;
-    height:32px;
+    width: 3.57143rem;
+    height: 3.57143rem;
     bottom:0px;
     right:20px;
-    background: #01b9af;
+    background-color: #01b9af;
+    display:none;
     -webkit-border-radius: 2px 2px 0 0;
     -moz-border-radius: 2px 2px 0 0;
-    border-radius:  2px 2px 0 0;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    -webkit-transition: .3s ease-out;
+    -o-transition: .3s ease-out;
+    transition: .3s ease-out;
+    z-index: 11;
+    color: #333;
+
 }
 
 a.scrollup {
@@ -1094,9 +1104,66 @@ a.scrollup:hover,a.scrollup:active,a.scrollup:focus {
     text-decoration:none;
 }
 a.scrollup i {
-    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     color: #fff;
 }
 a.scrollup i:hover {
     text-decoration:none;
 }
+
+
+/* speciality accordion */
+
+
+
+
+.card  {
+    border:none;
+    background-color:transparent!important;
+}
+
+.card-body {
+    background-color: #FFFFFF!important;
+    border-radius: 15px 50px!important;
+    margin-bottom: 10px!important;
+}
+.accordion .card-title
+{
+    font-weight: 600;
+}
+
+.card-header{
+    background-color: #FFFFFF;
+    border-radius: 15px 50px!important;
+}
+
+.accordion .card-header:after {
+    font-family: "Font Awesome 5 Free"; font-weight: 600; content: "\f068";
+    float: right;
+    color: #18bc9c;
+
+}
+.accordion .card-header.collapsed:after {
+    /* symbol for "collapsed" panels */
+    font-family: "Font Awesome 5 Free"; font-weight: 600; content: "\f067";
+    color: #666;
+}
+
+.accordion .card-header .card-title{
+    color: #18bc9c;
+}
+
+.accordion .card-header.collapsed .card-title{
+    color: #666;
+}
+
+.accordion .card-header .card-title:hover{
+    color: #18bc9c;
+}
+
+
